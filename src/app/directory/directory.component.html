@@ -1,0 +1,31 @@
+<p [ngClass]="classes" *ngIf="false">
+  directory works!
+</p>
+
+<!--<p *ngIf="false">Show only if the test is passed</p>-->
+<style>
+.red{color:red;}
+.blue{color:blue}
+.underline{text-decoration:underline;}
+</style>
+
+<h2>Ninja Listing</h2>
+
+<form id="filter">
+<label>Filter Ninja by Name</label>
+<input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}"/>
+</form>
+
+<ul id="ninja-listing">
+
+  <li *ngFor="let ninja of ninjas| filter:term">
+
+  <div class="single-ninja">
+  <span [ngStyle]="{background:ninja.belt}">{{ninja.belt}} belt</span>
+  <h3>{{ninja.name}}</h3>
+  </div>
+  </li>
+
+</ul>
+
+<button type="button" name="button" (click)="logIt()">Log Me</button>

@@ -1,0 +1,100 @@
+
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Stars &amp; Galaxies Catalogue</a>
+            </div>
+            <!-- <div id="navbar1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Challanges</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+            </div> -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="body-area">
+            <div class="body-content">
+
+                <div class="row">
+        <div class=" col-md-offset-1 col-md-10 col-sm-12 section-1 ques-summary">
+
+
+            <div class="mcq-ques">
+                  <h3 class="text-center">Enter Details of Your Star!</h3>
+                  <hr>
+                  <br><br>
+                  <form class="form"  [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+
+                      <div class="error-message" id="error-message"></div><br>
+
+                      <div class="form-group">
+
+                        <label class="label-control">Star Id</label>
+                        <input class="form-control" type="text" name="StarId" id="StarId" formControlName="starid" required="required">
+
+                        <!-- <div class="error-message" id="StarIdMessage"></div> -->
+                      </div>
+
+                      <div class="form-group">
+                        <label class="label-control">Star Name</label>
+                        <input class="form-control" type="text" name="StarName" id="StarName" formControlName="starname" required="required">
+
+                        <!-- <div class="error-message" id="StarNameMessage"></div> -->
+                      </div>
+
+                      <div class="form-group">
+                        <label class="label-control">Mass (in Solar Mass Units)</label>
+                        <input class="form-control" type="text" name="Mass" id="Mass" required="required" formControlName="starmass">
+
+                        <!-- <div class="error-message" id="MassMessage"></div> -->
+                      </div>
+
+                      <div class="form-group">
+                        <label class="label-control">Distance From Earth (in Light Years)</label>
+                        <input class="form-control" type="text" name="DistanceFromEarth" id="DistanceFromEarth" required="required" formControlName="stardistance">
+
+                        <!-- <div class="error-message" id="DistanceFromEarthMessage"></div> -->
+                      </div>
+
+                      <div class="form-group">
+                        <label class="label-control">Galaxy Name</label>
+                        <input class="form-control" type="text" name="GalaxyName" id="GalaxyName" required="required" formControlName="galaxyname">
+
+                        <!-- <div class="error-message" id="GalaxyNameMessage"></div> -->
+                      </div>
+
+
+
+                      <div class="form-group" style="text-align: center;">
+                        <input type="submit" name="submit" class="btn-lg btn-primary">
+                      </div>
+                  </form>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+       <hr>
+        <br><br>
+
+    <div class="footer " >
+      <div>
+        <footer>
+            <h4 class="footer-info text-center">Copyrights @ <strong>TJA137 EmpID Name</strong></h4>
+
+        </footer>
+      </div>
+    </div>
